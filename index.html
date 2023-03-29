@@ -8,12 +8,22 @@
     padding: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
     max-width: 50%;
     margin: 0 auto;
     background-color: #1C273A;
+    flex-direction: column;
   }
 
-  #wrapper {
+  #cargando {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #enviado {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,9 +45,25 @@
 
 </style>
 
-<div id="wrapper", class="container">
+<div id="cargando", class="container">
   <p>La campaña de <span>vacunas</span> <br> está siendo ejecutada</p>
   <img src="https://cdn.dribbble.com/users/1053052/screenshots/3600670/media/0cb7c262110297e1e91c05dc95ab4276.gif" 
 alt="Cargando...">
   <p>¡En unos minutos será enviado<br> el <span>correo</span> a los vacunatorios!</p>
 </div>
+
+
+<div id="enviado", class="container", style = "display:none">
+  <p>Campaña <br> <span>enviada</span> </p>
+  <img src="https://static.vecteezy.com/system/resources/previews/009/591/566/non_2x/check-mark-icon-free-png.png" 
+  width="400" height="400" alt="Enviado" >
+</div>
+
+<script>
+          var timer = setTimeout(function() {
+
+          document.getElementById("cargando").style.display = 'none';
+          document.getElementById("enviado").style.display = 'flex';    
+  
+          }, 45000);
+</script>
