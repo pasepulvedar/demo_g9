@@ -1,17 +1,43 @@
 <style>
   body {
+    background-color: #293955;
+  }
+  
+  .container {
+    border: 2px solid #6ECEB2;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    max-width: 50%;
+    margin: 0 auto;
     background-color: #1C273A;
+  }
+
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
   
   p {
-    color: #6ECEB2;
+    color: white;
     text-align: center;
-    margin-top: 50px;
-    font-size: 24px;
+    font-size: 30px;
+    font-family: "Open Sans", sans-serif;
   }
+
+  span {
+    color: #6ECEB2;
+    font-weight: bold;
+  }
+
 </style>
 
-<div style="display: flex; justify-content: center;">
-  <p>La campaña de vacunas está siendo ejecutada<br></p>
-  <img src="https://cdn.dribbble.com/users/1053052/screenshots/3600670/media/0cb7c262110297e1e91c05dc95ab4276.gif" alt="Cargando...">
+<div id="wrapper", class="container">
+  <p>La campaña de <span>vacunas</span> <br> está siendo ejecutada</p>
+  <img src="https://cdn.dribbble.com/users/1053052/screenshots/3600670/media/0cb7c262110297e1e91c05dc95ab4276.gif" 
+alt="Cargando...">
+  <p>¡En unos minutos será enviado<br> el <span>correo</span> a los vacunatorios!</p>
 </div>
